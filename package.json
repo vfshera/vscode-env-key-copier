@@ -22,6 +22,7 @@
   "engines": {
     "vscode": "^1.100.0"
   },
+  "packageManager": "pnpm@10.9.0",
   "categories": [
     "Other"
   ],
