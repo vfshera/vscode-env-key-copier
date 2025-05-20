@@ -17,7 +17,7 @@
     "env",
     "key"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "engines": {
     "vscode": "^1.100.0"
