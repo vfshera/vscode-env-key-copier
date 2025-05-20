@@ -31,7 +31,7 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm run release
-          commit: "[ci] release"
+          commit: "chore: release"
           title: "[ci] release"
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN  }}
