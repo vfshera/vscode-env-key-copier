@@ -12,3 +12,4 @@ src/**
 lint-staged.config.mjs
 out/test/**
 .github/**
+pnpm-lock.yaml
