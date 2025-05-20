@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.2.0
+
+### Minor Changes
+
+- [`b19a59e`](https://github.com/vfshera/vscode-env-key-copier/commit/b19a59e378e93e00d5902615c8b2472293027a59) Thanks [@vfshera](https://github.com/vfshera)! - update icon and tasks
+
+- [`629927f`](https://github.com/vfshera/vscode-env-key-copier/commit/629927f7dc28bfa724f02a6e1dd0ba4dda3eba4a) Thanks [@vfshera](https://github.com/vfshera)! - update to esbuild
+
 ## 1.1.1
 
 ### Patch Changes
