@@ -1,16 +1,13 @@
 import * as vscode from "vscode";
 
-function extractEnvKeyValuePairs(text: string): [string, string][] {
+function extractEnvKeys(text: string) {
   return text
     .split(/\r?\n/)
     .map((line) => line.trim())
     .filter(
       (line) => line && !line.startsWith("#") && /^[A-Z0-9_]+=/.test(line)
     )
-    .map((line) => {
-      const [key, ...rest] = line.split("=");
-      return [key, rest.join("=")] as [string, string];
-    });
+    .map((line) => line.split("=")[0]);
 }
 
 export function activate(context: vscode.ExtensionContext) {
@@ -27,43 +24,20 @@ export function activate(context: vscode.ExtensionContext) {
       ? document.getText()
       : document.getText(editor.selection);
 
-    const keyValuePairs = extractEnvKeyValuePairs(text);
+    const keyValuePairs = extractEnvKeys(text);
 
     if (keyValuePairs.length === 0) {
       return vscode.window.showInformationMessage("No valid .env keys found.");
     }
 
-    const selected = await vscode.window.showQuickPick(
-      keyValuePairs.map(([key, val]) => `${key}=${val}`),
-      {
-        canPickMany: true,
-        placeHolder: "Select keys to copy",
-      }
+    await vscode.env.clipboard.writeText(keyValuePairs.join("\n"));
+    vscode.window.showInformationMessage(
+      `Copied ${keyValuePairs.length} keys.`
     );
-
-    if (!selected || selected.length === 0) {
-      return;
-    }
-
-    const format = await vscode.window.showQuickPick(
-      ["Copy keys", "Copy key=value"],
-      { placeHolder: "Choose format" }
-    );
-
-    if (!format) {
-      return;
-    }
-
-    const result =
-      format === "Copy keys" ? selected.map((s) => s.split("=")[0]) : selected;
-
-    await vscode.env.clipboard.writeText(result.join("\n"));
-    vscode.window.showInformationMessage(`Copied ${result.length} keys.`);
   });
 
   context.subscriptions.push(disposable);
 
-  // Status bar item
   const statusBar = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
     100
