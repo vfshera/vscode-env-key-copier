@@ -31,7 +31,7 @@
     "onLanguage:dotenv",
     "onStartupFinished"
   ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
