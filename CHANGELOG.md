@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.1
+
+### Patch Changes
+
+- [`bffea81`](https://github.com/vfshera/vscode-env-key-copier/commit/bffea81fe888282d8490036d868310e8e01a5728) Thanks [@vfshera](https://github.com/vfshera)! - fix entrypoint
+
 ## 1.2.0
 
 ### Minor Changes
