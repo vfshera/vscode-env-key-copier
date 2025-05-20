@@ -10,6 +10,7 @@ src/**
 .husky/**
 .changeset/**
 lint-staged.config.mjs
-out/test/**
+out/**
 .github/**
 pnpm-lock.yaml
+esbuild.mjs
