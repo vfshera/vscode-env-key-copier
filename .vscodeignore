@@ -11,3 +11,4 @@ src/**
 .changeset/**
 lint-staged.config.mjs
 out/test/**
+.github/**
