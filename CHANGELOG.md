@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.1
+
+### Patch Changes
+
+- [`7332041`](https://github.com/vfshera/vscode-env-key-copier/commit/7332041329f26c3a20dfa2fda511314ab00b0983) Thanks [@vfshera](https://github.com/vfshera)! - update description
+
 ## 1.3.0
 
 ### Minor Changes
