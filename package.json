@@ -2,7 +2,7 @@
   "icon": "assets/icon.png",
   "name": "env-key-copier",
   "displayName": "Env Key Copier",
-  "description": "Copy keys or key=value pairs from .env files",
+  "description": "Copy keys from .env files",
   "publisher": "FranklinShera",
   "author": {
     "name": "Franklin Shera"
