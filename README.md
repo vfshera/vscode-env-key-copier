@@ -1,3 +1,5 @@
+<img width="150"  src="https://raw.githubusercontent.com/vfshera/vscode-env-key-copier/refs/heads/main/assets/icon.png" >
+
 # Env Key Copier
 
 A simple VSCode extension to extract and copy `.env` keys from your current file or selection to the clipboard.
@@ -14,4 +16,3 @@ A simple VSCode extension to extract and copy `.env` keys from your current file
 2. Select a portion of the text or leave no selection to use the entire file.
 3. Run the command **Env Key Copier: Copy Keys** from the Command Palette (`Ctrl+Shift+P`).
 4. Your `.env` keys will be copied to the clipboard.
- 
